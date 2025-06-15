@@ -1,47 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Charity: Water</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    /* Brand Colors */
+    :root {
+      --primary-color: #ffc907; /* A clean, bright blue */
+      --accent-color: #ffc907;  /* Warm, optimistic yellow */
+      --background-color: #ffffff;
+      --text-color: #333333;
+      --font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    /* Header styles */
+    header {
+      background-color: var(--primary-color);
+      padding: 1rem;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .nav-links li {
+      margin: 0 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Hero section styles */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+      background-color: var(--accent-color);
+      color: black;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .cta-button:hover {
+      background-color: #e0b03b;
+    }
+
+    /* Value proposition section styles */
+    .value-prop {
+      background-color: #f9f9f9;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .value-prop h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .value-prop p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-links li {
+        margin: 0.5rem 0;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-active {
+        display: flex !important;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <!-- Header with navigation bar -->
+  <header>
+    <!-- Company name -->
+    <div class="navbar-brand">charity: water</div>
+    <!-- Navigation menu -->
+    <nav>
+      <!-- Hamburger button for small screens -->
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+  <section class="hero">
+    <img src="img/charity_water.png" alt="Clean Water Project Image">
+    <button class="cta-button">Donate Now</button>
+  </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <section class="value-prop">
+    <h2>100% of Your Donation Goes to Clean Water Projects</h2>
+    <p>Your generosity changes lives. With charity: water, every dollar you give funds clean water initiatives — no admin fees, no hidden costs. Just pure impact.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 charity: water | Built by Melika Elahi
+  </footer>
+
+  <!-- Simple JavaScript for hamburger menu -->
+  <script>
+    // Wait until the page is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the hamburger button and navigation links
+      var navToggle = document.querySelector('.nav-toggle');
+      var navLinks = document.querySelector('.nav-links');
+
+      // When the button is clicked, show or hide the navigation links
+      navToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
+
